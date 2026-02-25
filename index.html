@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matrimonio María Carolina & Cristóbal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background: #f6ece6;
+      color: #3b3030;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 430px;
+      padding: 30px 15px 60px;
+      text-align: center;
+    }
+
+    .title-small {
+      letter-spacing: 0.25em;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .title-main {
+      font-size: 34px;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .toggle {
+      width: 80px;
+      height: 40px;
+      border-radius: 40px;
+      background: #d8f5d0;
+      margin: 0 auto 30px;
+      position: relative;
+    }
+
+    .toggle::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 40px;
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px 15px 24px;
+      margin-bottom: 26px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card-title {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .timer {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .time-box {
+      flex: 1;
+    }
+
+    .time-number {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .time-label {
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .section-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .btn {
+      flex: 1;
+      background: #a79283;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.09em;
+      padding: 10px 8px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #8b7363;
+    }
+
+    .section-column {
+      margin-top: 10px;
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 11px;
+      color: #766666;
+    }
+
+    @media (max-width: 400px) {
+      .title-main {
+        font-size: 28px;
+      }
+      .time-number {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title-small">ACTIVAMOS</div>
+    <div class="title-main">
+      LA CUENTA<br />REGRESIVA
+    </div>
+
+    <div class="toggle" aria-hidden="true"></div>
+
+    <div class="card">
+      <div class="card-title">
+        Matrimonio María Carolina &amp; Cristóbal
+      </div>
+
+      <div id="countdown" class="timer">
+        <div class="time-box">
+          <div class="time-number" id="days">00</div>
+          <div class="time-label">DÍAS</div>
+        </div>
+        <div class="time-box">
+          <div class="time-number" id="hours">00</div>
+          <div class="time-label">HORAS</div>
+        </div>
+        <div class="time-box">
+          <div class="time-number" id="minutes">00</div>
+          <div class="time-label">MINUTOS</div>
+        </div>
+        <div class="time-box">
+          <div class="time-number" id="seconds">00</div>
+          <div class="time-label">SEGUNDOS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fila 1: Novios Paris + Música -->
+    <div class="section-row">
+      <div>
+        <div class="section-label">Novios<br />Paris</div>
+        <a class="btn"
+           href="https://www.noviosparis.cl/home/couple-catalog/7452187"
+           target="_blank" rel="noopener">
+          Lista de regalos
+        </a>
+      </div>
+
+      <div>
+        <div class="section-label">Música para<br />la fiesta</div>
+        <a class="btn"
+           href="https://forms.gle/UkxoBo6HruEY6HNW7"
+           target="_blank" rel="noopener">
+          Canción que no puede faltar
+        </a>
+      </div>
+    </div>
+
+    <!-- Alergia alimentaria -->
+    <div class="section-column">
+      <div class="section-label">Alergia<br />alimentaria</div>
+      <a class="btn"
+         href="https://forms.gle/UkxoBo6HruEY6HNW7"
+         target="_blank" rel="noopener">
+        ¿Tienes alguna alergia?
+      </a>
+    </div>
+
+    <div class="footer-note">
+      Sábado 7 de marzo de 2026 &middot; 17:30 hrs &middot; Santiago de Chile
+    </div>
+  </div>
+
+  <script>
+    // Fecha del matrimonio: 7 de marzo de 2026, 17:30 hora de Santiago
+    // Usamos zona horaria de Chile (America/Santiago) si el navegador la soporta.
+    function getWeddingTime() {
+      // Construimos la fecha en UTC basada en la hora de Santiago
+      // 2026-03-07T17:30:00-03:00  ? equivalente fijo UTC
+      return new Date("2026-03-07T20:30:00Z").getTime();
+    }
+
+    const weddingTime = getWeddingTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingTime - now;
+
+      if (distance <= 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, "0");
+      document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+    }
+
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
+                                                                                                          
