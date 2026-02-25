@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Matrimonio Mar�a Carolina & Crist�bal</title>
+  <title>Matrimonio María Carolina & Cristóbal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
@@ -181,18 +181,18 @@
     <div class="toggle" aria-hidden="true"></div>
 
     <button id="musicButton" class="music-button">
-      Activar / Pausar musica
+      Activar / Pausar música
     </button>
 
     <div class="card">
       <div class="card-title">
-        Matrimonio Maria Carolina &amp; Cristobal
+        Matrimonio María Carolina &amp; Cristóbal
       </div>
 
       <div id="countdown" class="timer">
         <div class="time-box">
           <div class="time-number" id="days">00</div>
-          <div class="time-label">DIAS</div>
+          <div class="time-label">DÍAS</div>
         </div>
         <div class="time-box">
           <div class="time-number" id="hours">00</div>
@@ -209,7 +209,7 @@
       </div>
     </div>
 
-    <!-- Fila 1: Novios Paris + Musica -->
+    <!-- Fila 1: Novios Paris + Música -->
     <div class="section-row">
       <div>
         <div class="section-label">Novios<br />Paris</div>
@@ -221,11 +221,11 @@
       </div>
 
       <div>
-        <div class="section-label">Musica para<br />la fiesta</div>
+        <div class="section-label">Música para<br />la fiesta</div>
         <a class="btn"
            href="https://forms.gle/UkxoBo6HruEY6HNW7"
            target="_blank" rel="noopener">
-          Cancion que no puede faltar
+          Canción que no puede faltar
         </a>
       </div>
     </div>
@@ -236,12 +236,12 @@
       <a class="btn"
          href="https://forms.gle/UkxoBo6HruEY6HNW7"
          target="_blank" rel="noopener">
-        Tienes alguna alergia?
+        ¿Tienes alguna alergia?
       </a>
     </div>
 
     <div class="footer-note">
-      S�bado 7 de marzo de 2026 &middot; 17:30 hrs &middot; Santiago de Chile
+      Sábado 7 de marzo de 2026 &middot; 17:30 hrs &middot; Santiago de Chile
     </div>
   </div>
 
@@ -281,7 +281,7 @@
     const timerInterval = setInterval(updateCountdown, 1000);
     updateCountdown();
 
-    // --- Control de m�sica ---
+    // --- Control de música ---
     const audio = document.getElementById("music");
     const musicButton = document.getElementById("musicButton");
 
@@ -289,7 +289,7 @@
       musicButton.addEventListener("click", function () {
         if (audio.paused) {
           audio.play().catch(function(e) {
-            console.log("No se pudo reproducir autom�ticamente:", e);
+            console.log("No se pudo reproducir automáticamente:", e);
           });
         } else {
           audio.pause();
@@ -299,4 +299,3 @@
   </script>
 </body>
 </html>
-                                                                                             
