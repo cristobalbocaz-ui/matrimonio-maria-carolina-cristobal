@@ -48,7 +48,7 @@
       height: 40px;
       border-radius: 40px;
       background: #d8f5d0;
-      margin: 0 auto 30px;
+      margin: 0 auto 10px;
       position: relative;
     }
 
@@ -62,6 +62,18 @@
       background: #ffffff;
       border-radius: 50%;
       box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .music-button {
+      margin: 10px auto 25px;
+      display: block;
+      border: none;
+      background: none;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #3b3030;
     }
 
     .card {
@@ -154,6 +166,12 @@
   </style>
 </head>
 <body>
+
+  <!-- Audio: cambia el nombre del archivo si corresponde -->
+  <audio id="music" src="musica-matrimonio.mp3" loop>
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
   <div class="wrapper">
     <div class="title-small">ACTIVAMOS</div>
     <div class="title-main">
@@ -162,15 +180,19 @@
 
     <div class="toggle" aria-hidden="true"></div>
 
+    <button id="musicButton" class="music-button">
+      Activar / Pausar musica
+    </button>
+
     <div class="card">
       <div class="card-title">
-        Matrimonio María Carolina &amp; Cristóbal
+        Matrimonio Maria Carolina &amp; Cristobal
       </div>
 
       <div id="countdown" class="timer">
         <div class="time-box">
           <div class="time-number" id="days">00</div>
-          <div class="time-label">DÍAS</div>
+          <div class="time-label">DIAS</div>
         </div>
         <div class="time-box">
           <div class="time-number" id="hours">00</div>
@@ -187,7 +209,7 @@
       </div>
     </div>
 
-    <!-- Fila 1: Novios Paris + Música -->
+    <!-- Fila 1: Novios Paris + Musica -->
     <div class="section-row">
       <div>
         <div class="section-label">Novios<br />Paris</div>
@@ -199,11 +221,11 @@
       </div>
 
       <div>
-        <div class="section-label">Música para<br />la fiesta</div>
+        <div class="section-label">Musica para<br />la fiesta</div>
         <a class="btn"
            href="https://forms.gle/UkxoBo6HruEY6HNW7"
            target="_blank" rel="noopener">
-          Canción que no puede faltar
+          Cancion que no puede faltar
         </a>
       </div>
     </div>
@@ -214,7 +236,7 @@
       <a class="btn"
          href="https://forms.gle/UkxoBo6HruEY6HNW7"
          target="_blank" rel="noopener">
-        ¿Tienes alguna alergia?
+        Tienes alguna alergia?
       </a>
     </div>
 
@@ -225,10 +247,8 @@
 
   <script>
     // Fecha del matrimonio: 7 de marzo de 2026, 17:30 hora de Santiago
-    // Usamos zona horaria de Chile (America/Santiago) si el navegador la soporta.
     function getWeddingTime() {
-      // Construimos la fecha en UTC basada en la hora de Santiago
-      // 2026-03-07T17:30:00-03:00  ? equivalente fijo UTC
+      // Equivalente aproximado en UTC para 2026-03-07T17:30:00-03:00
       return new Date("2026-03-07T20:30:00Z").getTime();
     }
 
@@ -260,7 +280,23 @@
 
     const timerInterval = setInterval(updateCountdown, 1000);
     updateCountdown();
+
+    // --- Control de música ---
+    const audio = document.getElementById("music");
+    const musicButton = document.getElementById("musicButton");
+
+    if (musicButton && audio) {
+      musicButton.addEventListener("click", function () {
+        if (audio.paused) {
+          audio.play().catch(function(e) {
+            console.log("No se pudo reproducir automáticamente:", e);
+          });
+        } else {
+          audio.pause();
+        }
+      });
+    }
   </script>
 </body>
 </html>
-                                                                                                          
+                                                                                             
